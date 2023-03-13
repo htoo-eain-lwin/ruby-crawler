@@ -6,7 +6,7 @@ Rails.application.configure do
   YAML.load_file(env_file, aliases: true).symbolize_keys[:development].each do |key, value|
     ENV[key.to_s] = value
   end
-  
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -29,7 +29,7 @@ Rails.application.configure do
   config.public_file_server.enabled = false
 
   # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
