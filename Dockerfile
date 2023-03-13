@@ -75,6 +75,7 @@ COPY tmp/docker ./
 RUN gem install bundler && \
     bundle config set jobs $BUNDLE_JOBS && \
     bundle config set path $BUNDLE_PATH && \
+    bundle lock --add-platform aarch64-linux &&\
     if [ "$BUILD_ENV" = "production" ]; then \
       bundle config set deployment yes && \
       bundle config set without 'development test' ; \

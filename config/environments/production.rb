@@ -2,7 +2,11 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  env_file = File.join(Rails.root, 'config', 'application.yml')
+  YAML.load_file(env_file, aliases: true).symbolize_keys[:development].each do |key, value|
+    ENV[key.to_s] = value
+  end
+  
   # Code is not reloaded between requests.
   config.cache_classes = true
 
