@@ -8,5 +8,10 @@
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
-  %body
-    = yield
+  %body{ class: "#{controller_name} #{action_name} bg-secondary" }
+    %main#top.main
+      .container-xxl
+        %nav.navbar.navbar-expand-lg.navbar-light.border-bottom.mb-3
+          .container-fluid
+            = link_to 'Home', root_url, class: 'navbar-brand text-white'  
+        = yield  
