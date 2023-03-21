@@ -10,6 +10,11 @@ require_relative '../../spec/support/disable_animation'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  env_file = File.join(Rails.root, 'config', 'application.yml')
+  YAML.load_file(env_file, aliases: true).symbolize_keys[:test].each do |key, value|
+    ENV[key.to_s] = value
+  end
+
   # Turn false under Spring and add config.action_view.cache_template_loading = true.
   config.cache_classes = true
 
