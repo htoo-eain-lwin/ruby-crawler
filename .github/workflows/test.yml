@@ -10,7 +10,7 @@ on:
 env:
   DANGER_GITHUB_API_TOKEN: ${{ github.token }}
   DOCKER_REGISTRY_HOST: ${{ secrets.DOCKER_REGISTRY_HOST }}
-  DOCKER_REGISTRY_USERNAME: ${{ github.repository_owner }}
+  DOCKER_REGISTRY_USERNAME: htooeainlwin12
   DOCKER_REGISTRY_TOKEN: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
   DOCKER_IMAGE: htooeainlwin12/ruby-crawler
   NODE_VERSION: 16
