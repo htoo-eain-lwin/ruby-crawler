@@ -15,6 +15,28 @@
 
 ### Development
 
+- Set up the dependencies:
+
+  - PostgreSQL:
+
+  ```sh
+  brew install postgresql
+  brew services start postgresql
+  ```
+
+  - Redis:
+
+  ```sh
+  brew install redis
+  brew services start redis
+  ```
+
+  - Foreman:
+
+  ```sh
+  brew install foreman
+  ```
+
 - Setup the databases:
 
   - Postgres:
