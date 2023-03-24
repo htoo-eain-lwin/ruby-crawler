@@ -13,7 +13,9 @@
       .container-xxl
         %nav.navbar.navbar-expand-lg.navbar-light.border-bottom.mb-3
           .container-fluid
-            = link_to 'Home', root_url, class: 'navbar-brand text-white'  
+            = link_to 'Home', root_url, class: 'navbar-brand text-white'
+            - if user_signed_in?
+              = button_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-light'
         - if notice
           %p.notice= notice
         - if alert
