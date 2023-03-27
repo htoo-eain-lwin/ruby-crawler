@@ -14,4 +14,8 @@
         %nav.navbar.navbar-expand-lg.navbar-light.border-bottom.mb-3
           .container-fluid
             = link_to 'Home', root_url, class: 'navbar-brand text-white'  
-        = yield  
+        - if notice
+          %p.notice= notice
+        - if alert
+          %p.alert= alert
+        = yield
