@@ -21,10 +21,3 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  database: cx_web_production
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: cx_web_db # <-- Use the container name as the hostname
-  username: postgres
-  password: <%= ENV['DATABASE_PASSWORD'] %>
