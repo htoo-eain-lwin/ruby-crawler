@@ -7,7 +7,7 @@ rails_best_practices.lint
 rubocop.lint(inline_comment: true, force_exclusion: true)
 
 # Runs Brakeman on modified and added files
-brakeman.run
+brakeman.run('/ruby_crawler')
 
 # Runs Reek on modified and added files
 reek.lint
