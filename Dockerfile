@@ -1,4 +1,4 @@
-FROM ruby:3.1.3-slim
+FROM --platform=linux/amd64 ruby:3.1.3-slim
 
 ARG BUILD_ENV=development
 ARG RUBY_ENV=development

@@ -46,6 +46,5 @@ services:
       - TEST_RETRY=$TEST_RETRY
       - PORT=$PORT
       - DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN
-
 volumes:
   ruby-bundle:

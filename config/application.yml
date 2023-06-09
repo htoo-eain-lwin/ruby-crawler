@@ -16,6 +16,7 @@ development:
 
 test:
   <<: *default
+  DB_HOST: "db"
   TEST_RETRY: "0"
 
 # Set environment variables required in the initializers in order to precompile the assets.
