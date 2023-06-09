@@ -13,7 +13,7 @@ development:
 
 test:
   <<: *default
-  host:     <%= ENV['DB_HOST'] %>
+  host:     db
   port:     <%= ENV['DB_PORT'] %>
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
